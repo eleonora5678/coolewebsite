@@ -1,96 +1,122 @@
 body {
-    background-color: #D86487
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #D86487;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 2 Spalten */
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 55px 180px 1fr auto;
     gap: 20px;
-    height: 100vh;
+    min-height: 100vh;
     padding: 30px;
 }
 
-nav, header, main, aside, footer {
+/* Alle Boxen */
+
+nav,
+header,
+main,
+aside,
+footer {
     border-radius: 15px;
     overflow: hidden;
 }
 
-/* 1. Zeile – Navigation über beide Spalten */
-nav {
-    grid-column: 1 / 3;
-    height: 55px;
-}
-
-/* 2. Zeile – Header über beide Spalten */
-header {
-    grid-column: 1 / 3;
-    background-color: rgb(249, 222, 149);
-}
-
-/* 3. Zeile – Content links */
-main {
-    grid-column: 1 / 2;
-    background-color: #EEAAC3;
-}
-
-/* 3. Zeile – Sidebar rechts */
-aside {
-    grid-column: 2 / 3;
-    background-color: lightcoral;
-}
-
-/* 4. Zeile – Footer über beide Spalten */
-footer {
-    grid-column: 1 / 3;
-    background-color: lightgoldenrodyellow;
-}
-
 /* Navigation */
 
+nav {
+    grid-column: 1 / 3;
+}
+
 nav ul {
-    display: flex;
-    justify-content: flex-end; /* rechtsbündig */
-    align-items: center;       /* vertikal zentriert */
-    height: 100%;              /* füllt die Nav-Höhe */
-    display: flex;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #4A202A;
-  display: flex;
-  justify-content: flex-end;
-  color: #F1DFDD;
-   display: flex;
-}
-
-ul li a {
-    display: flex;           /* flex für Zentrierung */
-    align-items: center;     /* Text vertikal mittig */
-    height: 100%;            /* volle Höhe des nav */
-    padding: 0 20px;         /* nur horizontaler Abstand */
-    color: white;
-    text-decoration: none;
-    box-sizing: border-box;  /* wichtig, damit Padding korrekt gerechnet wird */
-}
-
-ul li a:hover:not(.active) {
-  background-color: #F1DFDD;
-  color: #4A202A;
-}
-
-ul li a.active {
-  background-color: #EEAAC3;
-    color: #4A202A;
-}
-
-h1 {
-    text-align: center;
-    font-size: 5em;
-    color: #4A202A;
+    list-style: none;
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
+    background: #4A202A;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+nav li {
+    height: 100%;
+}
+
+nav li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 22px;
+    text-decoration: none;
+    color: white;
+    transition: .25s;
+}
+
+nav li a:hover:not(.active) {
+    background: #F1DFDD;
+    color: #4A202A;
+}
+
+nav li a.active {
+    background: #EEAAC3;
+    color: #4A202A;
+}
+
+/* Header */
+
+header {
+    grid-column: 1 / 3;
+    background: #F9DE95;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4.5rem;
+    color: #4A202A;
+}
+
+/* Main */
+
+main {
+    background: #EEAAC3;
+    padding: 35px;
+}
+
+/* Sidebar */
+
+aside {
+    background: #F6C5D5;
+    padding: 35px;
+}
+
+/* Footer */
+
+footer {
+    grid-column: 1 / 3;
+    background: #F9DE95;
+    padding: 30px;
+}
+
+/* Überschriften */
+
+h2 {
+    margin-top: 0;
+    color: #4A202A;
+    font-size: 2rem;
+    border-bottom: 3px solid #4A202A;
+    padding-bottom: 10px;
+}
+
+/* Text */
+
+p {
+    color: #4A202A;
+    line-height: 1.7;
+    font-size: 1rem;
 }
