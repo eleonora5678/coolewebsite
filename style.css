@@ -1,0 +1,88 @@
+body {
+    background-color: #D86487
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 Spalten */
+    grid-template-rows: auto auto 1fr auto;
+    gap: 20px;
+    height: 100vh;
+    padding: 30px;
+}
+
+nav, header, main, aside, footer {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* 1. Zeile – Navigation über beide Spalten */
+nav {
+    grid-column: 1 / 3;
+    height: 55px;
+}
+
+/* 2. Zeile – Header über beide Spalten */
+header {
+    grid-column: 1 / 3;
+    background-color: lightgreen;
+}
+
+/* 3. Zeile – Content links */
+main {
+    grid-column: 1 / 2;
+    background-color: #EEAAC3;
+}
+
+/* 3. Zeile – Sidebar rechts */
+aside {
+    grid-column: 2 / 3;
+    background-color: lightcoral;
+}
+
+/* 4. Zeile – Footer über beide Spalten */
+footer {
+    grid-column: 1 / 3;
+    background-color: lightgoldenrodyellow;
+}
+
+/* Navigation */
+
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* rechtsbündig */
+    align-items: center;       /* vertikal zentriert */
+    height: 100%;              /* füllt die Nav-Höhe */
+    display: flex;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #4A202A;
+  display: flex;
+  justify-content: flex-end;
+  color: #F1DFDD;
+   display: flex;
+}
+
+ul li a {
+    display: flex;           /* flex für Zentrierung */
+    align-items: center;     /* Text vertikal mittig */
+    height: 100%;            /* volle Höhe des nav */
+    padding: 0 20px;         /* nur horizontaler Abstand */
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;  /* wichtig, damit Padding korrekt gerechnet wird */
+}
+
+ul li a:hover:not(.active) {
+  background-color: #F1DFDD;
+  color: #4A202A;
+}
+
+ul li a.active {
+  background-color: #EEAAC3;
+    color: #4A202A;
+}
